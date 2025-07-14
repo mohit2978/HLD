@@ -1,0 +1,5 @@
+## Notes
+![alt text](003youtube_250301_162744_1.jpg) ![alt text](003youtube_250301_162744_2.jpg) ![alt text](003youtube_250301_162744_3.jpg) ![alt text](003youtube_250301_162744_4.jpg) ![alt text](003youtube_250301_162744_5.jpg) ![alt text](003youtube_250301_162744_6.jpg) ![alt text](003youtube_250301_162744_7.jpg) ![alt text](003youtube_250301_162744_8.jpg) ![alt text](003youtube_250301_162744_9.jpg) ![alt text](003youtube_250301_162744_10.jpg) ![alt text](003youtube_250301_162744_11.jpg) ![alt text](003youtube_250301_162744_12.jpg) ![alt text](003youtube_250301_162744_13.jpg) ![alt text](003youtube_250301_162744_14.jpg) ![alt text](003youtube_250301_162744_15.jpg) ![alt text](003youtube_250301_162744_16.jpg) ![alt text](003youtube_250301_162744_17.jpg) ![alt text](003youtube_250301_162744_18.jpg) ![alt text](003youtube_250301_162744_19.jpg) ![alt text](003youtube_250301_162744_20.jpg)
+
+
+![alt text](003youtube_250301_162744_21.jpg) 

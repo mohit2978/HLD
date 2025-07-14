@@ -1,0 +1,3 @@
+# Notes
+
+![alt text](<007search systems_250311_180359_1.jpg>) ![alt text](<007search systems_250311_180359_2.jpg>) ![alt text](<007search systems_250311_180359_3.jpg>) ![alt text](<007search systems_250311_180359_4.jpg>) ![alt text](<007search systems_250311_180359_5.jpg>) ![alt text](<007search systems_250311_180359_6.jpg>) ![alt text](<007search systems_250311_180359_7.jpg>) ![alt text](<007search systems_250311_180359_8.jpg>) ![alt text](<007search systems_250311_180359_9.jpg>) ![alt text](<007search systems_250311_180359_10.jpg>) ![alt text](<007search systems_250311_180359_11.jpg>) ![alt text](<007search systems_250311_180359_12.jpg>) ![alt text](<007search systems_250311_180359_13.jpg>) ![alt text](<007search systems_250311_180359_14.jpg>)
