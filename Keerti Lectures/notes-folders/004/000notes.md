@@ -1,0 +1,2 @@
+# Notes
+![alt text](<004 lec4 cap theorem_250421_191938_1.jpg>) ![alt text](<004 lec4 cap theorem_250421_191938_2.jpg>) ![alt text](<004 lec4 cap theorem_250421_191938_3.jpg>) ![alt text](<004 lec4 cap theorem_250421_191938_4.jpg>) ![alt text](<004 lec4 cap theorem_250421_191938_5.jpg>) ![alt text](<004 lec4 cap theorem_250421_191938_6.jpg>) ![alt text](<004 lec4 cap theorem_250421_191938_7.jpg>) ![alt text](<004 lec4 cap theorem_250421_191938_8.jpg>) ![alt text](<004 lec4 cap theorem_250421_191938_9.jpg>) ![alt text](<004 lec4 cap theorem_250421_191938_10.jpg>)

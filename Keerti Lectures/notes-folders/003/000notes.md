@@ -1,0 +1,2 @@
+# Notes
+![alt text](<003 lec 3_250419_173656_1.jpg>) ![alt text](<003 lec 3_250419_173656_2.jpg>) ![alt text](<003 lec 3_250419_173656_3.jpg>) ![alt text](<003 lec 3_250419_173656_4.jpg>) ![alt text](<003 lec 3_250419_173656_5.jpg>) ![alt text](<003 lec 3_250419_173656_6.jpg>) ![alt text](<003 lec 3_250419_173656_7.jpg>) ![alt text](<003 lec 3_250419_173656_8.jpg>) ![alt text](<003 lec 3_250419_173656_9.jpg>) ![alt text](<003 lec 3_250419_173656_10.jpg>) ![alt text](<003 lec 3_250419_173656_11.jpg>) ![alt text](<003 lec 3_250419_173656_12.jpg>)

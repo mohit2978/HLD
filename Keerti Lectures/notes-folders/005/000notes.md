@@ -1,0 +1,2 @@
+# Notes
+![alt text](<005 lec5 _250422_141042_1.jpg>) ![alt text](<005 lec5 _250422_141042_2.jpg>) ![alt text](<005 lec5 _250422_141042_3.jpg>) ![alt text](<005 lec5 _250422_141042_4.jpg>) ![alt text](<005 lec5 _250422_141042_5.jpg>) ![alt text](<005 lec5 _250422_141042_6.jpg>) ![alt text](<005 lec5 _250422_141042_7.jpg>) ![alt text](<005 lec5 _250422_141042_8.jpg>) ![alt text](<005 lec5 _250422_141042_9.jpg>) ![alt text](<005 lec5 _250422_141042_10.jpg>) ![alt text](<005 lec5 _250422_141042_11.jpg>) ![alt text](<005 lec5 _250422_141042_12.jpg>)

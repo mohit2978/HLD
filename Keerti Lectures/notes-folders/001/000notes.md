@@ -1,0 +1,2 @@
+# Notes
+![alt text](<001 networking_250413_185539_1.jpg>) ![alt text](<001 networking_250413_185539_2.jpg>) ![alt text](<001 networking_250413_185539_3.jpg>) ![alt text](<001 networking_250413_185539_4.jpg>) ![alt text](<001 networking_250413_185539_5.jpg>) ![alt text](<001 networking_250413_185539_6.jpg>) ![alt text](<001 networking_250413_185539_7.jpg>) ![alt text](<001 networking_250413_185539_8.jpg>) ![alt text](<001 networking_250413_185539_9.jpg>) ![alt text](<001 networking_250413_185539_10.jpg>)
