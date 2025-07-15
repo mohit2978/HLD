@@ -1,0 +1,2 @@
+# Notes
+![alt text](<011 rest apis graphql_250507_101027_4.jpg>) ![alt text](<011 rest apis graphql_250507_101027_5.jpg>) ![alt text](<011 rest apis graphql_250507_101027_6.jpg>) ![alt text](<011 rest apis graphql_250507_101027_7.jpg>) ![alt text](<011 rest apis graphql_250507_101027_8.jpg>) ![alt text](<011 rest apis graphql_250507_101027_9.jpg>) ![alt text](<011 rest apis graphql_250507_101027_1.jpg>) ![alt text](<011 rest apis graphql_250507_101027_2.jpg>) ![alt text](<011 rest apis graphql_250507_101027_3.jpg>)

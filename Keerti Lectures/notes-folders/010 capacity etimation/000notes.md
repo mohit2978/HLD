@@ -1,0 +1,2 @@
+# Notes
+![alt text](<010 day 10 capacity estimation _250501_112350_1.jpg>) ![alt text](<010 day 10 capacity estimation _250501_112350_2.jpg>) ![alt text](<010 day 10 capacity estimation _250501_112350_3.jpg>) ![alt text](<010 day 10 capacity estimation _250501_112350_4.jpg>) ![alt text](<010 day 10 capacity estimation _250501_112350_5.jpg>) ![alt text](<010 day 10 capacity estimation _250501_112350_6.jpg>)

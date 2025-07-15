@@ -1,0 +1,2 @@
+# Notes
+![alt text](<013 day 13 chatapp_250508_124913_1.jpg>) ![alt text](<013 day 13 chatapp_250508_124913_2.jpg>) ![alt text](<013 day 13 chatapp_250508_124913_3.jpg>) ![alt text](<013 day 13 chatapp_250508_124913_4.jpg>) ![alt text](<013 day 13 chatapp_250508_124913_5.jpg>) ![alt text](<013 day 13 chatapp_250508_124913_6.jpg>) ![alt text](<013 day 13 chatapp_250508_124913_7.jpg>) ![alt text](<013 day 13 chatapp_250508_124913_8.jpg>) ![alt text](<013 day 13 chatapp_250508_124913_9.jpg>) ![alt text](<013 day 13 chatapp_250508_124913_10.jpg>)

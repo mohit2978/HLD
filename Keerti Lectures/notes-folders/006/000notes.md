@@ -1,1 +1,2 @@
 # Notes
+![alt text](<006 day6_250422_210605_1.jpg>) ![alt text](<006 day6_250422_210605_2.jpg>) ![alt text](<006 day6_250422_210605_3.jpg>) ![alt text](<006 day6_250422_210605_4.jpg>) ![alt text](<006 day6_250422_210605_5.jpg>) ![alt text](<006 day6_250422_210605_6.jpg>) ![alt text](<006 day6_250422_210605_7.jpg>) ![alt text](<006 day6_250422_210605_8.jpg>) ![alt text](<006 day6_250422_210605_9.jpg>)
