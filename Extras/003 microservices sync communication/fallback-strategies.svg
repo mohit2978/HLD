@@ -1,0 +1,94 @@
+<svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="500" fill="#f8f9fa" rx="10"/>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">Fallback Strategies</text>
+
+  <!-- Primary Service (Failing) -->
+  <rect x="250" y="60" width="200" height="80" fill="#e74c3c" rx="10" stroke="#2c3e50" stroke-width="2"/>
+  <text x="350" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="white">Primary Service</text>
+  <text x="350" y="115" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="white">❌ FAILING</text>
+
+  <!-- Decision point -->
+  <circle cx="350" cy="190" r="40" fill="#f39c12" stroke="#2c3e50" stroke-width="2"/>
+  <text x="350" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Service</text>
+  <text x="350" y="204" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Failed?</text>
+
+  <line x1="350" y1="140" x2="350" y2="150" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <!-- Strategy 1: Cached Response -->
+  <rect x="40" y="270" width="140" height="100" fill="#d4edda" rx="10" stroke="#27ae60" stroke-width="2"/>
+  <text x="110" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Cached Data</text>
+  <text x="110" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Return previously</text>
+  <text x="110" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">successful response</text>
+  <text x="110" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60" font-weight="bold">✓ Best option</text>
+  <text x="110" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">(if available)</text>
+
+  <line x1="310" y1="200" x2="180" y2="270" stroke="#27ae60" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="240" y="230" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">First choice</text>
+
+  <!-- Strategy 2: Default Response -->
+  <rect x="210" y="270" width="140" height="100" fill="#fff3cd" rx="10" stroke="#f39c12" stroke-width="2"/>
+  <text x="280" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Default Value</text>
+  <text x="280" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Return safe</text>
+  <text x="280" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">default response</text>
+  <text x="280" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#f39c12" font-weight="bold">⚠ Conservative</text>
+  <text x="280" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">(no cache)</text>
+
+  <line x1="350" y1="230" x2="280" y2="270" stroke="#f39c12" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="310" y="255" font-family="Arial, sans-serif" font-size="10" fill="#f39c12">Second</text>
+
+  <!-- Strategy 3: Graceful Degradation -->
+  <rect x="380" y="270" width="140" height="100" fill="#e3f2fd" rx="10" stroke="#3498db" stroke-width="2"/>
+  <text x="450" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Degraded Mode</text>
+  <text x="450" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Hide non-critical</text>
+  <text x="450" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">features</text>
+  <text x="450" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db" font-weight="bold">↓ Reduced UX</text>
+  <text x="450" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">(core works)</text>
+
+  <line x1="390" y1="200" x2="450" y2="270" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="430" y="230" font-family="Arial, sans-serif" font-size="10" fill="#3498db">Third</text>
+
+  <!-- Strategy 4: Stub Response -->
+  <rect x="550" y="270" width="140" height="100" fill="#fdf2f2" rx="10" stroke="#e74c3c" stroke-width="2"/>
+  <text x="620" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Placeholder</text>
+  <text x="620" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">Show stub/mock</text>
+  <text x="620" y="330" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#666">data</text>
+  <text x="620" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c" font-weight="bold">⚠ Last resort</text>
+  <text x="620" y="363" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">(UI structure)</text>
+
+  <line x1="390" y1="210" x2="550" y2="290" stroke="#e74c3c" stroke-width="2" marker-end="url(#arrowhead)" stroke-dasharray="5,5"/>
+  <text x="480" y="255" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">Last</text>
+
+  <!-- Example scenarios -->
+  <rect x="40" y="390" width="140" height="85" fill="white" rx="5" stroke="#ccc" stroke-width="1"/>
+  <text x="110" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Example:</text>
+  <text x="110" y="428" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Weather data</text>
+  <text x="110" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">from 15 mins ago</text>
+  <text x="110" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#27ae60">"Updated 15m ago"</text>
+
+  <rect x="210" y="390" width="140" height="85" fill="white" rx="5" stroke="#ccc" stroke-width="1"/>
+  <text x="280" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Example:</text>
+  <text x="280" y="428" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Recommendations:</text>
+  <text x="280" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">show popular items</text>
+  <text x="280" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#f39c12">(not personalized)</text>
+
+  <rect x="380" y="390" width="140" height="85" fill="white" rx="5" stroke="#ccc" stroke-width="1"/>
+  <text x="450" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Example:</text>
+  <text x="450" y="428" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Feed without</text>
+  <text x="450" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">suggestions section</text>
+  <text x="450" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#3498db">(hide extra)</text>
+
+  <rect x="550" y="390" width="140" height="85" fill="white" rx="5" stroke="#ccc" stroke-width="1"/>
+  <text x="620" y="410" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#333">Example:</text>
+  <text x="620" y="428" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">Placeholder image</text>
+  <text x="620" y="442" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">when image service</text>
+  <text x="620" y="456" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#e74c3c">fails</text>
+</svg>

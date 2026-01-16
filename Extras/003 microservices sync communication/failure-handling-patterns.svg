@@ -1,0 +1,95 @@
+<svg viewBox="0 0 800 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#333" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="#f8f9fa" rx="10"/>
+
+  <!-- Title -->
+  <text x="400" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#333">Four Patterns of Failure Handling</text>
+
+  <!-- Pattern 1: Timeout -->
+  <rect x="40" y="70" width="170" height="150" fill="#fff3cd" rx="10" stroke="#f39c12" stroke-width="2"/>
+  <text x="125" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">1. Timeout</text>
+  <text x="125" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Prevents indefinite</text>
+  <text x="125" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">waiting</text>
+
+  <rect x="50" y="160" width="150" height="50" fill="white" rx="5"/>
+  <text x="125" y="180" text-anchor="middle" font-family="monospace, sans-serif" font-size="10" fill="#333">max_wait = 2s</text>
+  <text x="125" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">Abort if no response!</text>
+
+  <!-- Pattern 2: Retry -->
+  <rect x="230" y="70" width="170" height="150" fill="#d4edda" rx="10" stroke="#27ae60" stroke-width="2"/>
+  <text x="315" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">2. Retry</text>
+  <text x="315" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Handles transient</text>
+  <text x="315" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">failures</text>
+
+  <rect x="240" y="160" width="150" height="50" fill="white" rx="5"/>
+  <text x="315" y="178" text-anchor="middle" font-family="monospace, sans-serif" font-size="10" fill="#333">Wait: 1s → 2s → 4s</text>
+  <text x="315" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">Exponential backoff</text>
+
+  <!-- Pattern 3: Circuit Breaker -->
+  <rect x="420" y="70" width="170" height="150" fill="#e3f2fd" rx="10" stroke="#3498db" stroke-width="2"/>
+  <text x="505" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">3. Circuit Breaker</text>
+  <text x="505" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Stops calling</text>
+  <text x="505" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">failing services</text>
+
+  <rect x="430" y="160" width="150" height="50" fill="white" rx="5"/>
+  <text x="505" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Closed → Open →</text>
+  <text x="505" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#3498db">Half-Open</text>
+
+  <!-- Pattern 4: Fallback -->
+  <rect x="610" y="70" width="170" height="150" fill="#fdf2f2" rx="10" stroke="#e74c3c" stroke-width="2"/>
+  <text x="695" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">4. Fallback</text>
+  <text x="695" y="125" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">Provides</text>
+  <text x="695" y="142" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#666">alternatives</text>
+
+  <rect x="620" y="160" width="150" height="50" fill="white" rx="5"/>
+  <text x="695" y="178" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#333">Return cached data</text>
+  <text x="695" y="198" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">or default value</text>
+
+  <!-- Flow diagram -->
+  <text x="400" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">How They Work Together</text>
+
+  <!-- Request flow -->
+  <rect x="50" y="280" width="120" height="40" fill="#3498db" rx="5"/>
+  <text x="110" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Request</text>
+
+  <line x1="170" y1="300" x2="220" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="220" y="280" width="140" height="40" fill="#f39c12" rx="5"/>
+  <text x="290" y="305" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Set Timeout</text>
+
+  <line x1="360" y1="300" x2="400" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="400" y="280" width="140" height="40" fill="#27ae60" rx="5"/>
+  <text x="470" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">If fails,</text>
+  <text x="470" y="311" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">Retry</text>
+
+  <line x1="540" y1="300" x2="580" y2="300" stroke="#333" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+  <rect x="580" y="280" width="140" height="40" fill="#3498db" rx="5"/>
+  <text x="650" y="295" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white">Track failures,</text>
+  <text x="650" y="311" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="bold">Circuit Breaker</text>
+
+  <!-- Fallback path -->
+  <line x1="650" y1="320" x2="650" y2="360" stroke="#e74c3c" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="670" y="340" font-family="Arial, sans-serif" font-size="10" fill="#e74c3c">If circuit open</text>
+
+  <rect x="580" y="360" width="140" height="40" fill="#e74c3c" rx="5"/>
+  <text x="650" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Return Fallback</text>
+
+  <!-- Success path -->
+  <line x1="290" y1="320" x2="290" y2="360" stroke="#27ae60" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="210" y="340" font-family="Arial, sans-serif" font-size="10" fill="#27ae60">If succeeds</text>
+
+  <rect x="220" y="360" width="140" height="40" fill="#27ae60" rx="5"/>
+  <text x="290" y="385" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="white" font-weight="bold">Return Response</text>
+
+  <!-- Summary -->
+  <rect x="40" y="415" width="720" height="25" fill="#d4edda" rx="5" stroke="#27ae60" stroke-width="1"/>
+  <text x="400" y="432" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#27ae60" font-weight="bold">Together these patterns create resilient distributed systems that handle failures gracefully</text>
+</svg>
