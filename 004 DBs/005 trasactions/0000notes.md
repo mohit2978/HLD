@@ -1,4 +1,5 @@
-# Distributed Transactions
+# Database Transactions
+
 
 When you buy concert tickets online, what happens if the payment succeeds but the ticket reservation fails? Or when transferring money between bank accounts, what prevents your account from being debited without the recipient's account being credited? These scenarios require database transactions, the foundation of data consistency.
 
@@ -64,7 +65,6 @@ COMMIT;
 The transaction ensures that Alice's debit, Bob's credit, and the transfer record all succeed together, or none of them happen.
 ![alt text](image-1.png)
 
-![alt text](<020 021 distributed transactions _250331_112149_1.jpg>) 
 
 ![alt text](image-2.png)
 
@@ -323,6 +323,38 @@ User A: BEGIN TRANSACTION → checks availability → purchases ticket → COMMI
 User B: BEGIN TRANSACTION → waits for User A → checks availability → sees 0 tickets → fails
 ```
 
+The classic race condition scenario: What happens when multiple users try to buy the last few tickets simultaneously?
+
+Without proper isolation:
+
+```sql
+# Both users see 2 tickets available
+User A: SELECT available_tickets FROM events WHERE id = 'concert123';  # Returns 2
+User B: SELECT available_tickets FROM events WHERE id = 'concert123';  # Returns 2
+
+# Both users proceed to buy 2 tickets each
+User A: UPDATE events SET available_tickets = 0 WHERE id = 'concert123';  # 2 -> 0
+User B: UPDATE events SET available_tickets = -2 WHERE id = 'concert123'; # 0 -> -2
+
+# Result: 4 tickets sold for 2 available seats!
+```
+With proper transaction isolation:
+```sql
+
+-- User A's transaction
+BEGIN TRANSACTION;
+SELECT available_tickets FROM events WHERE id = 'concert123' FOR UPDATE;  -- Locks row
+-- User B must wait here
+UPDATE events SET available_tickets = available_tickets - 2 WHERE id = 'concert123';
+COMMIT;  -- Lock released
+
+-- User B's transaction (runs after A completes)
+BEGIN TRANSACTION;
+SELECT available_tickets FROM events WHERE id = 'concert123' FOR UPDATE;  -- Returns 0
+-- Sees no tickets available, purchase fails safely
+ROLLBACK;
+```
+
 ## Durability: Committed Changes Are Permanent
 Definition: Once a transaction commits, the changes survive system crashes, power failures, and other failures.
 
@@ -333,7 +365,7 @@ How databases achieve durability:
 - Replication: Changes are copied to multiple database servers
 - Real-world importance: After you submit your tax return online, the data must survive even if the server crashes immediately after confirmation.
 
-![alt text](<020 021 distributed transactions _250331_112149_2.jpg>) ![alt text](<020 021 distributed transactions _250331_112149_3.jpg>) ![alt text](<020 021 distributed transactions _250331_112149_4.jpg>) ![alt text](<020 021 distributed transactions _250331_112149_5.jpg>) ![alt text](<020 021 distributed transactions _250331_112149_6.jpg>) ![alt text](<020 021 distributed transactions _250331_112149_7.jpg>) ![alt text](<020 021 distributed transactions _250331_112149_8.jpg>) ![alt text](<020 021 distributed transactions _250331_112149_9.jpg>)
+
 
 ## System Design Interview Tips
 
@@ -363,3 +395,36 @@ Transaction-Related Questions
 - Wrong isolation level → Either poor performance or race conditions
 - Ignoring distributed transactions → Inconsistency across microservices
 - Not considering compensation → Can't handle failures in distributed systems
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
