@@ -174,7 +174,16 @@ Managing and reducing latency is crucial for maintaining an efficient and effect
 - Caching: By storing frequently accessed data closer to the user, caches can significantly reduce the time it takes to retrieve that data.
 - Choosing Appropriate Data Center Location: For cloud services, choosing a data center that's physically closer to the majority of users can help reduce latency. For example, if you are serving users in the US, you would want to pick your data center in San Francisco instead of Singapore.
 
+### Interview Script: Addressing Latency
 
+**Interviewer:** "How will you ensure low latency for this system?"
+
+**You:** "I'll approach it by optimizing the 'Critical Path' at three levels:
+1. **The Edge:** Deploy a CDN to minimize the 'Last Mile' network latency.
+2. **The App Layer:** Implement P99 monitoring. If we see spikes, I'd investigate 'Stop-the-world' Garbage Collection or resource contention.
+3. **The Data Layer:** Use an In-memory cache (Redis) for frequently accessed 'hot' data to avoid $O(n)$ disk scans.
+
+I prefer measuring P99 over Averages because, in a distributed system, the average hides the outliers that indicate real architectural bottlenecks."
 
 
 
