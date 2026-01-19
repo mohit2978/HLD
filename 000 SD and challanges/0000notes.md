@@ -1,3 +1,29 @@
+# SD
+
+System design is the process of architecting and planning (often data-intensive) applications by carefully selecting and integrating various data to efficiently handle data processing and storage needs. This involves understanding the requirements of the application, identifying the appropriate data systems to manage the diverse tasks, and using application code to stitch together these different tools, allowing them to work in harmony.
+
+When you integrate multiple tools to deliver a service, the service's interface or API typically conceals the implementation specifics from clients. By doing this, you have effectively constructed a new, specialized data system from smaller, general-purpose components. This combined data system can offer certain assurances, such as maintaining cache consistency through proper invalidation or updates, ensuring that external clients receive consistent results.
+
+### Functional Requirements
+Functional requirements are the features and capabilities that a system must have to fulfill its intended purpose. They describe what a system is supposed to do and are focused on the specific tasks or functionalities the system should perform. Functional requirements are often derived from user needs, business objectives, or system specifications.
+
+Examples of functional requirements include:
+
+- User actions: Describing the actions a user can perform within the system, such as creating an account, logging in, or submitting a form.
+- Data input and processing: Defining how the system should process, manipulate, or transform data based on user input or other sources.
+
+Functional requirements are usually documented and communicated to developers and stakeholders through various formats, such as project requirement docs (PRDs). These requirements help guide the development process and ensure that the final product meets the intended objectives and provides the desired functionality.
+
+### Non-functional Requirements
+
+Besides making things functionally work, we also have to make sure the system satisfies non-functional requirements, most notably:
+
+- Scalability: A well-designed system should be able to handle increasing amounts of work or users without compromising performance. This involves designing for horizontal and vertical scaling, optimizing resource usage, and planning for future growth.
+- Availability: High availability is essential for ensuring that the system can continue to function even in the face of failures, such as hardware or network issues. This requires designing for redundancy, failover mechanisms, and monitoring the system's health.
+- Performance (latency & throughput): Latency refers to the time taken to respond to requests, while throughput is the amount of work or transactions the system can handle in a given time frame.
+Besides these main non-functional requirements, there are also reliability (the service returns correct results), consistency (data is consistent between services), and efficiency (the service should have minimal redundant operations).
+
+
 # Core Challenges in Web-scale System Design (and How to Tackle Them)
 
 Before diving into the reusable building blocks of distributed system design, readers should have a fair understanding of what the common challenges are. They arise from serving the very large scale of user-base by adding more machines. Without a huge number of users, all system design problems scale back to coding problems. Like the solutions assembled from reusable building blocks, the challenges have several repeatable patterns. I hope to present the four challenges in a way that anyone who clears coding interviews can easily understand. Hopefully, the later jargon-rich content will make more sense after we understand what problems they are solving.
