@@ -47,7 +47,6 @@ With caching, the system pre-computes feeds or caches query results. Most reques
 
 The numbers make caching mandatory. A database cluster handling 50,000 queries per second costs hundreds of thousands annually. A cache cluster handling 5 million requests per second costs a fraction of that. The cache hit rate determines total system cost.
 
-![alt text](<018 019 caching strategies_250330_163214_1.jpg>) ![alt text](<018 019 caching strategies_250330_163214_2.jpg>) ![alt text](<018 019 caching strategies_250330_163214_3.jpg>) ![alt text](<018 019 caching strategies_250330_163214_4.jpg>) ![alt text](<018 019 caching strategies_250330_163214_5.jpg>) ![alt text](<018 019 caching strategies_250330_163214_6.jpg>) ![alt text](<018 019 caching strategies_250330_163214_7.jpg>) ![alt text](<018 019 caching strategies_250330_163214_8.jpg>) ![alt text](<018 019 caching strategies_250330_163214_9.jpg>)
 
 ## When Not to Cache
 Real-time sensor data streaming at high frequency should not cache. Industrial automation systems reading sensors 1,000 times per second need current values. Cache adds latency without benefit. Push-based systems work better.
@@ -148,4 +147,3 @@ Discuss cache invalidation strategy. For a social network, mention that posts ca
 Mention cache-aside pattern by default. Application checks cache, falls back to database on miss, and populates cache. This gives control over what to cache and when to invalidate. Note that other patterns exist but cache-aside fits most scenarios.
 
 Discuss cache hit rate. A 95% hit rate means only 5% of requests hit the database. With 10 million requests per day, that's 500,000 database queries instead of 10 million. Quantifying the improvement demonstrates understanding of the pattern's value.
-
