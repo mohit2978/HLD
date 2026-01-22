@@ -1,0 +1,145 @@
+<svg viewBox="0 0 700 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#3498db" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="700" height="400" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="350" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+    Database Sharding: Horizontal Partitioning
+  </text>
+
+  <!-- Application Layer -->
+  <rect x="270" y="50" width="160" height="60" rx="10" fill="#3498db" stroke="#2980b9" stroke-width="2"/>
+  <text x="350" y="72" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">
+    Application
+  </text>
+  <text x="350" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#fff">
+    Routes by UserID
+  </text>
+
+  <!-- Routing Logic -->
+  <rect x="260" y="125" width="180" height="30" rx="8" fill="#e3f2fd" stroke="#3498db" stroke-width="2"/>
+  <text x="350" y="145" text-anchor="middle" font-family="monospace" font-size="10" fill="#2c3e50">
+    shard = UserID % 3
+  </text>
+
+  <!-- Arrows to Shards -->
+  <path d="M 290 155 L 120 200" stroke="#3498db" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+  <line x1="350" y1="155" x2="350" y2="195" stroke="#3498db" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <path d="M 410 155 L 580 200" stroke="#3498db" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+
+  <!-- Shard Labels -->
+  <text x="120" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">
+    UserID % 3 = 0
+  </text>
+  <text x="350" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">
+    UserID % 3 = 1
+  </text>
+  <text x="580" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#7f8c8d">
+    UserID % 3 = 2
+  </text>
+
+  <!-- Shard A -->
+  <g>
+    <rect x="30" y="200" width="180" height="170" rx="10" fill="#27ae60" stroke="#1e8449" stroke-width="3"/>
+    <text x="120" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">
+      Shard A (Server 1)
+    </text>
+
+    <!-- Data Table -->
+    <rect x="45" y="235" width="150" height="125" rx="5" fill="#fff"/>
+    <text x="120" y="252" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#2c3e50">
+      UserID | Name
+    </text>
+    <line x1="50" y1="257" x2="190" y2="257" stroke="#bdc3c7" stroke-width="1"/>
+
+    <text x="55" y="275" font-family="monospace" font-size="9" fill="#2c3e50">
+      3      | Alice
+    </text>
+    <text x="55" y="292" font-family="monospace" font-size="9" fill="#2c3e50">
+      6      | David
+    </text>
+    <text x="55" y="309" font-family="monospace" font-size="9" fill="#2c3e50">
+      9      | Grace
+    </text>
+    <text x="55" y="326" font-family="monospace" font-size="9" fill="#2c3e50">
+      12     | Jack
+    </text>
+    <text x="55" y="343" font-family="monospace" font-size="9" fill="#7f8c8d">
+      ...
+    </text>
+  </g>
+
+  <!-- Shard B -->
+  <g>
+    <rect x="260" y="200" width="180" height="170" rx="10" fill="#9b59b6" stroke="#7d3c98" stroke-width="3"/>
+    <text x="350" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">
+      Shard B (Server 2)
+    </text>
+
+    <!-- Data Table -->
+    <rect x="275" y="235" width="150" height="125" rx="5" fill="#fff"/>
+    <text x="350" y="252" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#2c3e50">
+      UserID | Name
+    </text>
+    <line x1="280" y1="257" x2="420" y2="257" stroke="#bdc3c7" stroke-width="1"/>
+
+    <text x="285" y="275" font-family="monospace" font-size="9" fill="#2c3e50">
+      1      | Bob
+    </text>
+    <text x="285" y="292" font-family="monospace" font-size="9" fill="#2c3e50">
+      4      | Emma
+    </text>
+    <text x="285" y="309" font-family="monospace" font-size="9" fill="#2c3e50">
+      7      | Frank
+    </text>
+    <text x="285" y="326" font-family="monospace" font-size="9" fill="#2c3e50">
+      10     | Henry
+    </text>
+    <text x="285" y="343" font-family="monospace" font-size="9" fill="#7f8c8d">
+      ...
+    </text>
+  </g>
+
+  <!-- Shard C -->
+  <g>
+    <rect x="490" y="200" width="180" height="170" rx="10" fill="#f39c12" stroke="#d68910" stroke-width="3"/>
+    <text x="580" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">
+      Shard C (Server 3)
+    </text>
+
+    <!-- Data Table -->
+    <rect x="505" y="235" width="150" height="125" rx="5" fill="#fff"/>
+    <text x="580" y="252" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#2c3e50">
+      UserID | Name
+    </text>
+    <line x1="510" y1="257" x2="650" y2="257" stroke="#bdc3c7" stroke-width="1"/>
+
+    <text x="515" y="275" font-family="monospace" font-size="9" fill="#2c3e50">
+      2      | Carol
+    </text>
+    <text x="515" y="292" font-family="monospace" font-size="9" fill="#2c3e50">
+      5      | Eve
+    </text>
+    <text x="515" y="309" font-family="monospace" font-size="9" fill="#2c3e50">
+      8      | Iris
+    </text>
+    <text x="515" y="326" font-family="monospace" font-size="9" fill="#2c3e50">
+      11     | Kim
+    </text>
+    <text x="515" y="343" font-family="monospace" font-size="9" fill="#7f8c8d">
+      ...
+    </text>
+  </g>
+
+  <!-- Trade-offs box -->
+  <rect x="50" y="385" width="600" height="10" rx="2" fill="#e3f2fd"/>
+  <text x="350" y="393" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#7f8c8d">
+    Fast single-user queries | Slow cross-shard aggregations | Choose partition key carefully
+  </text>
+</svg>
