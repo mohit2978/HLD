@@ -85,6 +85,12 @@ High availability is often talked about in terms of "nines". If something has "f
 
 ![alt text](image-3.png)
 
+For now remeber downtime a year !!
+
+7 9's--> 3sec<br>
+6 9's--> 30 sec<br>
+5 9's--> 300 sec == 5min<br>
+
 But, how many nines are good enough for my system, or is it even necessary? To answer that we first have to discuss Service Level Agreement (SLA).
 
 ### Service Level Agreement (SLA)
